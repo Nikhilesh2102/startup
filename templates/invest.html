@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/23fdf0a18e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div style="margin-top: 70px;">
+      {% for Idea in Ideas %}
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; margin-top: 20px; " class="container">
+        <div class="card shadow-lg" style="width: 100%; margin-right: 20px; margin-bottom: 20px; ">
+          <div class="card-body" >
+            <h5 class="card-title">{{Idea.idea_title}}</h5> <br>
+            <a href="{% url 'invest_idea' Idea.id %}" class="btn btn-primary">View Whole Idea...</a>
+          </div>
+        </div></div>
+        {% endfor %}
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
+

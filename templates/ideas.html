@@ -1,0 +1,17 @@
+{% extends 'home.html' %}
+
+{% block title %}Express Your Ideas{% endblock %}
+
+{%block content%}
+<div class="login-page">
+<div class="box" style="width: 60vw; height: fit-content; justify-content: center;">
+    <form method="POST">
+        {% csrf_token %} 
+        <textarea type="text" name="title" placeholder="Give your idea a title without actually telling the whole idea as it can be stolen."id="idea-text" style="margin-top: 40px; width: 70%;"></textarea><br><br>
+        <textarea type="text" name="description" placeholder="Explain your whole idea here."  id="idea-text" style="width: 70%;"></textarea><br><br>
+        <input type="number" name="instant investment" placeholder="Quote your instant investment needed in rupees."><br><br>
+        <input type="number" name="total investment" placeholder="Quote your total investment needed in rupees."><br><br>
+        <button type="submit" id="idea-btn" ><span></span>Post Your Idea</button>
+    </form>
+</div></div>
+{%endblock%}

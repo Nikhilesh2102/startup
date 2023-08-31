@@ -1,0 +1,29 @@
+{% extends 'home.html' %}
+{% block title %}Login{% endblock %}
+
+{%block content%}
+
+   <div class="login-page">
+    <div class="box"><br> 
+    <br><h1 style="color: white; font-size: 40px;">Sign Up!</h1> <br>
+    <form method="POST">
+      {% csrf_token %}
+      <input type="text" placeholder="Enter username" name="username" id="login-username"  style="width: 70%; height: 2.5em; background: transparent; border: none; border-bottom: 2px solid rgb(255, 255, 255); color: white;">
+      <br><br>
+      <input type="password" placeholder="Enter password" name="password1" id="login-password" style="width: 70%; height: 2.5em; background: transparent; border: none; border-bottom: 2px solid white; color: whitesmoke;">
+      <br><br>
+      <input type="password" placeholder="Enter password" name="password2" id="login-password" style="width: 70%; height: 2.5em; background: transparent; border: none; border-bottom: 2px solid white; color: whitesmoke;">
+      <br><br>
+      <input type="email" placeholder="Enter email" name="email" id="login-password" style="width: 70%; height: 2.5em; background: transparent; border: none; border-bottom: 2px solid white; color: whitesmoke;">
+      <br><br>
+      <input type="text" placeholder="First Name" name="first_name" id="login-password" style="width: 70%; height: 2.5em; background: transparent; border: none; border-bottom: 2px solid white; color: whitesmoke;">
+      <br><br>
+      <input type="text" placeholder="Last Name" name="last_name" id="login-password" style="width: 70%; height: 2.5em; background: transparent; border: none; border-bottom: 2px solid white; color: whitesmoke;">
+      <br><br>
+      <div class="button-2">
+      <button type="submit"><span></span>Sign Up</button><br>
+      </div>
+      
+  </form>
+</div></div>
+{%endblock%}

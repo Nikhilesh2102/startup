@@ -1,0 +1,22 @@
+
+{% extends 'home.html' %}
+{% block title %}Login{% endblock %}
+
+{%block content%}
+   <div class="login-page">
+    <div class="box"><br> 
+    <br><h1 style="color: white; font-size: 40px;">Login</h1> <br>
+    <form method="POST">
+      {% csrf_token %}
+      <input type="text" placeholder="Enter username" name="username" id="login-username"  style="width: 70%; height: 2.5em; background: transparent; border: none; border-bottom: 2px solid rgb(255, 255, 255); color: white;">
+      <br><br>
+      <input type="password" placeholder="Enter password" name="password" id="login-password" style="width: 70%; height: 2.5em; background: transparent; border: none; border-bottom: 2px solid white; color: whitesmoke;">
+      <br><br>
+      <div class="button-2">
+      <button type="submit"><span></span>Login</button><br>
+      </div>
+      <p style="color: white;">Don't have an account?<a href="register" style="text-decoration: none; color: rgb(255, 255, 255);">Sign Up.</a></p><br>
+
+  </form>
+</div></div>
+{%endblock%}
